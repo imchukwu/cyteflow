@@ -27,7 +27,7 @@ const CTASection = () => {
           <div className="flex flex-col md:flex-row gap-4 justify-center items-center text-muted-foreground">
             <div className="flex items-center gap-2">
               <Phone className="h-5 w-5" />
-              <span>+234 800 123 4567</span>
+              <span>+234 812 289 1361</span>
             </div>
             <div className="hidden md:block">•</div>
             <div className="flex items-center gap-2">

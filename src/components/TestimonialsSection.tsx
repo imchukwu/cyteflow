@@ -32,20 +32,20 @@ const Testimonial = ({ quote, author, role, rating }: TestimonialProps) => {
 const TestimonialsSection = () => {
   const testimonials = [
     {
-      quote: "CyteFlow completely changed how I approach web design. Their platform made it so easy to create a professional website for my business.",
-      author: "Sarah Johnson",
-      role: "Small Business Owner",
-      rating: 5
+      "quote": "What impressed me most about CyteFlow is their lightning-fast support. When I had an issue with my business site, their team responded and fixed it within minutes - no waiting!",
+      "author": "Sarah Nwamaka",
+      "role": "Small Business Owner",
+      "rating": 5
     },
     {
-      quote: "As someone with no coding experience, I was able to create a beautiful portfolio website in just a few hours. The hosting is reliable and fast.",
-      author: "Mark Davis",
-      role: "Photographer",
-      rating: 4
+      "quote": "I was shocked at how affordable CyteFlow is - for less than my daily breakfast budget, I got a professional portfolio website with zero upfront costs. The monthly subscription means I never worry about surprise payments.",
+      "author": "Mark Adebowale",
+      "role": "Photographer",
+      "rating": 4
     },
     {
       quote: "The e-commerce add-on saved me thousands in development costs. I now have a fully functional online store that looks amazing.",
-      author: "Emily Zhang",
+      author: "Abdulquadri Mukaila",
       role: "Online Retailer",
       rating: 5
     }

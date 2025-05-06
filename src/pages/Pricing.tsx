@@ -57,36 +57,38 @@ const PricingPlan = ({ name, price, description, features, highlighted = false }
 const Pricing = () => {
   const basicFeatures = [
     { text: "Free website design", available: true },
-    { text: "1 website", available: true },
-    { text: "1GB storage", available: true },
-    { text: "CyteFlow subdomain", available: true },
+    { text: "Custom domains", available: true },
+    { text: "Upto 5 webpages", available: true },
+    { text: "1 revision per month", available: true },
     { text: "Community support", available: true },
-    { text: "Basic analytics", available: true },
-    { text: "Custom domain", available: false },
+    { text: "Custom domain", available: true },
+    { text: "Basic analytics", available: false },
+    { text: "CyteFlow subdomain", available: false },
     { text: "Remove CyteFlow branding", available: false },
   ];
   
   const proFeatures = [
     { text: "Free website design", available: true },
-    { text: "5 websites", available: true },
-    { text: "10GB storage", available: true },
-    { text: "Custom domain", available: true },
+    { text: "Custom domains", available: true },
+    { text: "Upto 15 web pages", available: true },
+    { text: "Blog Integration", available: true },
+    { text: "Basic SEO", available: true },
     { text: "Remove CyteFlow branding", available: true },
     { text: "Priority support", available: true },
-    { text: "Advanced analytics", available: true },
     { text: "Form submissions", available: true },
+    { text: "Advanced analytics", available: false },
   ];
   
   const businessFeatures = [
     { text: "Free website design", available: true },
-    { text: "Unlimited websites", available: true },
-    { text: "50GB storage", available: true },
+    { text: "Custom website design", available: true },
     { text: "Custom domains", available: true },
+    { text: "Blog Integration", available: true },
+    { text: "Social Media Dynamic Interactions", available: true },
     { text: "Remove CyteFlow branding", available: true },
     { text: "24/7 priority support", available: true },
     { text: "Advanced analytics", available: true },
     { text: "Form submissions", available: true },
-    { text: "Team collaboration", available: true },
   ];
 
   return (
@@ -152,9 +154,9 @@ const Pricing = () => {
                 </Button>
               </div>
               <div className="p-6 rounded-lg border">
-                <h4 className="text-lg font-bold mb-2">Membership Area</h4>
-                <p className="text-2xl font-bold mb-2">₦40,000 <span className="text-sm text-muted-foreground">one-time</span></p>
-                <p className="text-muted-foreground mb-4">Create members-only content with login and subscriptions.</p>
+                <h4 className="text-lg font-bold mb-2">Blog Post Writing</h4>
+                <p className="text-2xl font-bold mb-2">₦30,000 <span className="text-sm text-muted-foreground">monthly</span></p>
+                <p className="text-muted-foreground mb-4">Professional monthly blog writing service to keep your content fresh and engaging, without the hassle.</p>
                 <Button variant="outline" size="sm" asChild>
                   <Link to="/about">Contact Us</Link>
                 </Button>
@@ -196,7 +198,7 @@ const Pricing = () => {
               </div>
               <div className="py-6">
                 <h3 className="text-xl font-bold mb-3">What payment methods do you accept?</h3>
-                <p>We accept bank transfers, credit/debit cards, and mobile money payments.</p>
+                <p>We accept bank transfers only for now.</p>
               </div>
             </div>
           </div>
