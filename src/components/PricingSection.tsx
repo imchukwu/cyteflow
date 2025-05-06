@@ -68,7 +68,7 @@ const PricingSection = () => {
             description="Perfect for individuals and small projects."
             features={[
               "Free website design",
-              "1 website",
+              "Up to 5 webpages",
               "Reliable hosting",
               "Basic support"
             ]}
@@ -79,9 +79,9 @@ const PricingSection = () => {
             description="Ideal for professionals and growing businesses."
             features={[
               "Free website design",
-              "Advanced features",
-              "Priority support",
-              "Analytics dashboard"
+              "Upto 15 web pages",
+              "Blog Integration",
+              "Basic SEO"
             ]}
             highlighted 
           />
