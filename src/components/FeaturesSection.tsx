@@ -30,7 +30,7 @@ const FeaturesSection = () => {
     {
       icon: <Globe className="h-6 w-6" />,
       title: "Custom Domains",
-      description: "Connect your own domain or use our free subdomain for your website."
+      description: "Connect your own domain or purchase a custom domain through us for seamless setup and effective management."
     },
     {
       icon: <Zap className="h-6 w-6" />,

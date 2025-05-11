@@ -21,14 +21,14 @@ const Navbar = () => {
           <Link to="/" className="text-sm font-medium hover:text-primary transition-colors">Home</Link>
           <Link to="/about" className="text-sm font-medium hover:text-primary transition-colors">About</Link>
           <Link to="/pricing" className="text-sm font-medium hover:text-primary transition-colors">Pricing</Link>
-          <Link to="/templates" className="text-sm font-medium hover:text-primary transition-colors">Templates</Link>
+          <Link to="/samples" className="text-sm font-medium hover:text-primary transition-colors">Samples</Link>
         </div>
         <div className="flex items-center gap-4">
-          <Button variant="outline" size="sm" asChild>
+          {/* <Button variant="outline" size="sm" asChild>
             <Link to="/about">Contact Us</Link>
-          </Button>
+          </Button> */}
           <Button size="sm" asChild>
-            <Link to="/about">Get Started</Link>
+            <Link to="/contact">Contact Us</Link>
           </Button>
         </div>
       </div>
@@ -47,13 +47,13 @@ const Navbar = () => {
           <Link to="/" className="block py-2 px-3 text-sm hover:bg-muted rounded-md">Home</Link>
           <Link to="/about" className="block py-2 px-3 text-sm hover:bg-muted rounded-md">About</Link>
           <Link to="/pricing" className="block py-2 px-3 text-sm hover:bg-muted rounded-md">Pricing</Link>
-          <Link to="/templates" className="block py-2 px-3 text-sm hover:bg-muted rounded-md">Templates</Link>
+          <Link to="/samples" className="block py-2 px-3 text-sm hover:bg-muted rounded-md">Samples</Link>
           <div className="border-t my-2"></div>
-          <Button variant="outline" size="sm" className="w-full mb-2" asChild>
+          {/* <Button variant="outline" size="sm" className="w-full mb-2" asChild>
             <Link to="/about">Contact Us</Link>
-          </Button>
+          </Button> */}
           <Button size="sm" className="w-full" asChild>
-            <Link to="/about">Get Started</Link>
+            <Link to="/contact">Contact Us</Link>
           </Button>
         </div>
       )}

@@ -5,13 +5,13 @@ import FooterSection from '@/components/FooterSection';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 
-interface TemplateProps {
+interface SampleProps {
   title: string;
   category: string;
   imageUrl: string;
 }
 
-const Template = ({ title, category, imageUrl }: TemplateProps) => {
+const Sample = ({ title, category, imageUrl }: SampleProps) => {
   return (
     <div className="rounded-lg overflow-hidden border hover:shadow-md transition-shadow">
       <div className="h-56 bg-muted relative">
@@ -25,7 +25,7 @@ const Template = ({ title, category, imageUrl }: TemplateProps) => {
         <h3 className="text-lg font-bold mt-1">{title}</h3>
         <div className="mt-4">
           <Button variant="outline" size="sm" asChild>
-            <Link to="/about">Use This Template</Link>
+            <Link to="/about">View This Sample</Link>
           </Button>
         </div>
       </div>
@@ -33,8 +33,8 @@ const Template = ({ title, category, imageUrl }: TemplateProps) => {
   );
 };
 
-const Templates = () => {
-  const templates = [
+const Samples = () => {
+  const samples = [
     {
       title: "Business Pro",
       category: "Corporate",
@@ -88,9 +88,9 @@ const Templates = () => {
         <section className="py-16 md:py-24 bg-muted/30">
           <div className="container">
             <div className="max-w-3xl mx-auto text-center">
-              <h1 className="text-4xl md:text-5xl font-bold font-heading mb-6">Website Templates</h1>
+              <h1 className="text-4xl md:text-5xl font-bold font-heading mb-6">Website Samples</h1>
               <p className="text-lg md:text-xl text-muted-foreground mb-8">
-                Browse our collection of professional templates. We'll customize any of these designs for your business at no cost.
+                Browse our collection of professional samples. We'll customize any of these designs for your business at no cost.
               </p>
               <Button size="lg" asChild>
                 <Link to="/about">Get Your Free Design</Link>
@@ -99,7 +99,7 @@ const Templates = () => {
           </div>
         </section>
 
-        {/* Templates */}
+        {/* Samples */}
         <section className="py-16">
           <div className="container">
             {/* Category Filter */}
@@ -119,14 +119,14 @@ const Templates = () => {
               ))}
             </div>
             
-            {/* Templates Grid */}
+            {/* Samples Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-              {templates.map((template, index) => (
-                <Template 
+              {samples.map((sample, index) => (
+                <Sample 
                   key={index}
-                  title={template.title}
-                  category={template.category}
-                  imageUrl={template.imageUrl}
+                  title={sample.title}
+                  category={sample.category}
+                  imageUrl={sample.imageUrl}
                 />
               ))}
             </div>
@@ -153,4 +153,4 @@ const Templates = () => {
   );
 };
 
-export default Templates;
+export default Samples;

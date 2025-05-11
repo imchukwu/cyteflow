@@ -3,6 +3,7 @@ import React from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Phone, Mail } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { FaWhatsapp } from 'react-icons/fa';
 
 const CTASection = () => {
   return (
@@ -21,12 +22,12 @@ const CTASection = () => {
               </Link>
             </Button>
             <Button variant="outline" size="lg" asChild>
-              <Link to="/templates">View Templates</Link>
+              <Link to="/samples">View Samples</Link>
             </Button>
           </div>
           <div className="flex flex-col md:flex-row gap-4 justify-center items-center text-muted-foreground">
             <div className="flex items-center gap-2">
-              <Phone className="h-5 w-5" />
+              <FaWhatsapp className="h-5 w-5 text-green-500" />
               <span>+234 812 289 1361</span>
             </div>
             <div className="hidden md:block">•</div>

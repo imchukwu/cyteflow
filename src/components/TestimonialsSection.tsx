@@ -77,8 +77,8 @@ const TestimonialsSection = () => {
         
         <div className="mt-16 text-center animate-fade-in">
           <div className="p-8 rounded-xl bg-gradient-to-r from-primary/10 to-secondary/10 max-w-3xl mx-auto">
-            <h3 className="text-2xl font-bold mb-4 font-heading">Ready to join them?</h3>
-            <p className="mb-6 text-lg">Start designing your website today and see the difference.</p>
+            <h3 className="text-2xl font-bold mb-4 font-heading">Take your brand to the next level.</h3>
+            <p className="mb-6 text-lg">Your business deserves better. Let us build it.</p>
             <button className="bg-primary text-primary-foreground hover:bg-primary/90 px-6 py-3 rounded-md font-medium transition-colors">
               Get Started For Free
             </button>

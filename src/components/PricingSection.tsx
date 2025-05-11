@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Check } from 'lucide-react';
@@ -6,13 +5,23 @@ import { Link } from 'react-router-dom';
 
 interface PricingPlanProps {
   name: string;
-  price: string;
+  price?: string;
+  originalPrice?: string;
   description: string;
   features: string[];
   highlighted?: boolean;
+  comingSoon?: boolean;
 }
 
-const PricingPlan = ({ name, price, description, features, highlighted = false }: PricingPlanProps) => {
+const PricingPlan = ({
+  name,
+  price = '',
+  originalPrice,
+  description,
+  features,
+  highlighted = false,
+  comingSoon = false,
+}: PricingPlanProps) => {
   return (
     <div className={`flex flex-col h-full rounded-lg border ${highlighted ? 'border-primary shadow-lg shadow-primary/10' : ''}`}>
       {highlighted && (
@@ -22,22 +31,37 @@ const PricingPlan = ({ name, price, description, features, highlighted = false }
       )}
       <div className={`p-6 ${highlighted ? 'rounded-b-lg' : 'rounded-lg'} flex flex-col h-full`}>
         <h3 className="text-xl font-bold font-heading">{name}</h3>
-        <div className="mt-4 mb-2">
-          <span className="text-3xl font-bold font-heading">{price}</span>
-          <span className="text-muted-foreground">/month</span>
-        </div>
+        {price && (
+          <div className="mt-4 mb-2 flex items-center gap-2">
+            <span className="text-3xl font-bold font-heading">{price}</span>
+            {originalPrice && (
+              <span className="text-muted-foreground line-through text-lg">
+                {originalPrice}
+              </span>
+            )}
+            <span className="text-muted-foreground text-sm">/month</span>
+          </div>
+        )}
         <p className="text-muted-foreground mb-6">{description}</p>
-        <Button variant={highlighted ? "default" : "outline"} className="mb-6" asChild>
-          <Link to="/pricing">View Plan</Link>
-        </Button>
-        <div className="space-y-3 mt-auto">
-          {features.map((feature, index) => (
-            <div key={index} className="flex items-center gap-2">
-              <Check className="h-5 w-5 flex-shrink-0 text-primary" />
-              <span>{feature}</span>
-            </div>
-          ))}
-        </div>
+
+        {!comingSoon && (
+          <Button variant={highlighted ? 'default' : 'outline'} className="mb-6" asChild>
+            <Link to="/pricing">View Plan</Link>
+          </Button>
+        )}
+
+        {comingSoon ? (
+          <div className="text-sm text-center text-muted-foreground italic mt-auto">Coming Soon</div>
+        ) : (
+          <div className="space-y-3 mt-auto">
+            {features.map((feature, index) => (
+              <div key={index} className="flex items-center gap-2">
+                <Check className="h-5 w-5 flex-shrink-0 text-primary" />
+                <span>{feature}</span>
+              </div>
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );
@@ -60,41 +84,38 @@ const PricingSection = () => {
             </Button>
           </div>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 animate-slide-up">
-          <PricingPlan 
-            name="Basic" 
-            price="₦5,000" 
-            description="Perfect for individuals and small projects."
+          <PricingPlan
+            name="Basic"
+            price="₦5,000"
+            originalPrice="₦7,500"
+            description="Perfect for individuals and professionals."
             features={[
-              "Free website design",
-              "Up to 5 webpages",
-              "Reliable hosting",
-              "Basic support"
+              'Single-page website',
+              '1 revision per month',
+              'Basic support',
+              'Free website design',
             ]}
           />
-          <PricingPlan 
-            name="Professional" 
-            price="₦15,000" 
-            description="Ideal for professionals and growing businesses."
+          <PricingPlan
+            name="Business"
+            price="₦10,000"
+            originalPrice="₦15,000"
+            description="Ideal for small and growing businesses."
             features={[
-              "Free website design",
-              "Upto 15 web pages",
-              "Blog Integration",
-              "Basic SEO"
+              'All in Basic plan',
+              'Business email integration',
+              'Multi-page website',
+              'Basic SEO support',
             ]}
-            highlighted 
+            highlighted
           />
-          <PricingPlan 
-            name="Business" 
-            price="₦30,000" 
+          <PricingPlan
+            name="Premium"
             description="For businesses with advanced needs."
-            features={[
-              "Free website design",
-              "Premium features",
-              "Premium support",
-              "Advanced integrations"
-            ]} 
+            features={[]}
+            comingSoon
           />
         </div>
       </div>
