@@ -105,9 +105,9 @@ const PricingSection = () => {
             description="Ideal for small and growing businesses."
             features={[
               'All in Basic plan',
+              'Up to 10 pages',
               'Business email integration',
               'Multi-page website',
-              'Basic SEO support',
             ]}
             highlighted
           />
