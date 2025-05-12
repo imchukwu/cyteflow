@@ -81,7 +81,6 @@ const Pricing = () => {
     { text: "Free website design", available: true },
     { text: "Multi-page website", available: true },
     { text: "2 revisions per month", available: true },
-    { text: "Business email integration", available: true },
     { text: "Basic SEO support", available: true },
     { text: "Custom branding option", available: true },
     { text: "Up to 10 pages", available: true },

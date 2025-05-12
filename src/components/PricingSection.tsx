@@ -106,7 +106,7 @@ const PricingSection = () => {
             features={[
               'All in Basic plan',
               'Up to 10 pages',
-              'Business email integration',
+              'Basic SEO features',
               'Multi-page website',
             ]}
             highlighted
